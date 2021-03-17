@@ -11,17 +11,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'MCU APP',
+      title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        appBarTheme: AppBarTheme(
-          color: Colors.red,
-          elevation: 0,
-        )
+          primarySwatch: Colors.blue,
+          appBarTheme: AppBarTheme(
+            color: Colors.white,
+            elevation: 0,
+          ),
+          scaffoldBackgroundColor: Colors.white
       ),
-       home: DashboardPage(),
+      home: DashboardPage(),
     );
   }
 }
-
 
