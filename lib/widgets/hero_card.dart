@@ -22,7 +22,7 @@ class HeroCard extends StatelessWidget {
                   height: MediaQuery.of(context).size.width * 0.8 * 1.33,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Colors.orange, Colors.deepOrangeAccent],
+                      colors: [Color(0xffF0131E), Colors.redAccent],
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
                     ),

@@ -17,7 +17,7 @@ class _DetailPageState extends State<DetailPage> {
             child: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Colors.orange, Colors.deepOrangeAccent],
+                  colors: [Color(0xffF0131E), Colors.redAccent],
                   begin: Alignment.bottomLeft,
                   end: Alignment.topRight,
                 ),
