@@ -1,27 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mcu_app/dashboard.dart';
+import 'package:flutter_mcu_app/hero/hero_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
-          primarySwatch: Colors.blue,
-          appBarTheme: AppBarTheme(
-            color: Colors.white,
-            elevation: 0,
-          ),
-          scaffoldBackgroundColor: Colors.white
+        useMaterial3: true,
+        scaffoldBackgroundColor: Colors.white,
       ),
-      home: DashboardPage(),
+      home: const HeroPage(),
     );
   }
 }
-
