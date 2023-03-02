@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mcu_app/detail_page.dart';
+import 'package:flutter_mcu_app/hero/detail_page.dart';
 
 class HeroCard extends StatelessWidget {
+  const HeroCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context,
-            PageRouteBuilder(pageBuilder: (context, a, b) => DetailPage()));
+        Navigator.push(
+          context,
+          PageRouteBuilder(
+            pageBuilder: (context, a, b) => const DetailPage(),
+          ),
+        );
       },
       child: Stack(
         children: <Widget>[
@@ -20,9 +26,12 @@ class HeroCard extends StatelessWidget {
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.8,
                   height: MediaQuery.of(context).size.width * 0.8 * 1.33,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xffF0131E), Colors.redAccent],
+                      colors: [
+                        Color(0xffF0131E),
+                        Colors.redAccent,
+                      ],
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
                     ),
@@ -34,9 +43,9 @@ class HeroCard extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: Padding(
-
               padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.width * 0.10 * 0.5),
+                top: MediaQuery.of(context).size.width * 0.10 * 0.5,
+              ),
               child: Hero(
                 tag: 'image_hero',
                 child: Image.asset(
@@ -51,22 +60,24 @@ class HeroCard extends StatelessWidget {
             left: 40,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
+              children: const [
                 Text(
                   'Capitan America',
                   style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 32,
-                      letterSpacing: 2),
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 32,
+                    letterSpacing: 2,
+                  ),
                 ),
                 Text(
                   'Click for more details',
                   style: TextStyle(
-                      color: Colors.white70,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      letterSpacing: 2),
+                    color: Colors.white70,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    letterSpacing: 2,
+                  ),
                 ),
               ],
             ),
@@ -76,7 +87,6 @@ class HeroCard extends StatelessWidget {
     );
   }
 }
-
 
 class BackgroundClipper extends CustomClipper<Path> {
   @override
@@ -102,6 +112,7 @@ class BackgroundClipper extends CustomClipper<Path> {
     return path;
   }
 
+  @override
   bool shouldReclip(CustomClipper<Path> oldClipper) {
     return true;
   }
